@@ -1,0 +1,26 @@
+client->server:
+SIGN:                       0-10
+    flush
+    send attack
+    reply for attack
+
+STRING:                     10-4096
+    attackname[5]
+    myname[10]
+
+
+
+server->client:
+SIGN:                       0-10
+    reply for user update
+    reply for attack
+    reply for invitation
+    draw? || in or out
+    win/lose
+    attack warn
+    usernum[4]
+
+USERLIST:                   11-2047
+
+
+STRING:                     2048-4096
